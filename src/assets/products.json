@@ -1,0 +1,115 @@
+{ 
+            "basicBc": [
+                {
+                    "name": "Basic Business Card",
+                    "productBasic": [
+                        {
+                            "price": "0.2332",
+                            "cornerRoundedIndex": "0.0498",
+
+                            "pricePerSquareCard": "0.2666",
+                            "cornerRoundedSquareIndex": "0.0498",
+
+                            "quantity": 50
+                        },
+                        {
+                            "price": "0.2332",
+                            "cornerRoundedIndex": "0.0501",
+
+                            "pricePerSquareCard": "0.2666",
+                            "cornerRoundedSquareIndex": "0.05",
+
+                            "quantity": 100
+                        }, 
+                        {
+                            "price": "0.19995",
+                            "cornerRoundedIndex": "0.04165",
+
+                            "pricePerSquareCard": "0.2291",
+                            "cornerRoundedSquareIndex": "0.04585",
+
+                            "quantity": 200
+                        },
+                        {
+                            "price": "0.16665",
+                            "cornerRoundedIndex": "0.033325",
+
+                            "pricePerSquareCard": "0.193725",
+                            "cornerRoundedSquareIndex": "0.04375",
+
+                            "quantity": 400
+                        },
+                        {
+                            "price": "0.16665",
+                            "cornerRoundedIndex": "0.03333",
+
+                            "pricePerSquareCard": "0.194433",
+                            "cornerRoundedSquareIndex": "0.041666",
+
+                            "quantity": 600
+                        },
+                        {
+                            "price": "0.1666625",
+                            "cornerRoundedIndex": "0.03333",
+
+                            "pricePerSquareCard": "0.1937375",
+                            "cornerRoundedSquareIndex": "0.04375",
+
+                            "quantity": 800
+                        },
+                        {
+                            "price": "0.1666625",
+                            "cornerRoundedIndex": "0.03333",
+
+                            "pricePerSquareCard": "0.19166",
+                            "cornerRoundedSquareIndex": "0.03633",
+
+                            "quantity": 1000
+                        }
+                    ]
+		      }
+
+	       ],
+            "superBc": [
+
+                {
+                    "name": "Super Business Card",
+                    "product": [
+                        {
+                            "price": "0.2198",
+                            "quantity": 50
+                        },
+                        {
+                            "price": "0.2198",
+                            "quantity": 100
+                        },
+                        {
+                            "price": "0.19995",
+                            "quantity": 200
+                        },
+                        {
+                            "price": "0.16995",
+                            "quantity": 400
+                        },
+                        {
+                            "price": "0.16995",
+                            "quantity": 600
+                        },
+                        {
+                            "price": "0.16995",
+                            "quantity": 800
+                        },
+                        {
+                            "price": "0.16145",
+                            "quantity": 1000
+                        }
+                    ],
+                    "cornerRoundedPerBasicCard": "0.05",
+                    "pricePerSquareCard": "0.3118",
+                    "cornerRoundedPerSquareCard": "0.072",
+                    "vat": "20",
+                    "currency": "£"
+		      }
+
+	       ]
+}

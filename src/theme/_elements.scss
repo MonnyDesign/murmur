@@ -1,0 +1,369 @@
+/*
+    Fix SVG support in IE9+
+    https://gist.github.com/larrybotha/7881691
+*/
+.ie9 img[src$=".svg"] {
+    width: 100%;
+}
+
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    img[src$=".svg"] {
+        width: 100%;
+    }
+}
+
+.wf-loading h1,
+.wf-loading h2,
+.wf-loading h3,
+.wf-loading h4,
+.wf-loading h5,
+.wf-loading h6,
+.wf-loading p,
+.wf-loading b,
+.wf-loading span,
+.wf-loading a,
+.wf-loading li,
+.wf-loading dt,
+.wf-loading dd,
+.wf-loading legend,
+.wf-loading label,
+.wf-loading button,
+.wf-loading input,
+.wf-loading select,
+.wf-loading textarea,
+.wf-loading blockquote,
+.wf-loading cite,
+.wf-loading td,
+.wf-loading th,
+.wf-loading address,
+.wf-loading small .wf-loading i {
+    visibility: hidden;
+}
+
+//
+// HELPERS
+// --------------------------------------------------
+.nm {
+    margin: 0 !important;
+}
+
+.nmtop {
+    margin-top: 0 !important;
+}
+
+.nmbottom {
+    margin-bottom: 0 !important;
+}
+
+.mleft {
+    margin-left: $padding-base-horizontal;
+}
+
+.mright {
+    margin-right: $padding-base-horizontal;
+}
+
+.mtop {
+    margin-top: $padding-large-vertical;
+}
+
+.row-centered {
+    text-align: center;
+
+    & > [class*='col-'] {
+        display: inline-block;
+        float: none;
+        text-align: left;
+        margin-right: -4px;
+        vertical-align: top;
+    }
+}
+
+.row-no-gutter {
+    margin-left: 0;
+    margin-right: 0;
+
+    & > [class*='col-'] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.separator {
+    color: $gray-light;
+}
+
+.visible-gfb {
+    @media only screen and (min-width: $grid-float-breakpoint) {
+        display: block !important;
+    }
+
+    @media only screen and (max-width: $grid-float-breakpoint-max) {
+        display: none !important;
+    }
+}
+
+.hidden-gfb {
+    @media only screen and (min-width: $grid-float-breakpoint) {
+        display: none !important;
+    }
+
+    @media only screen and (max-width: $grid-float-breakpoint-max) {
+        display: block !important;
+    }
+}
+
+//
+// MISC
+// --------------------------------------------------
+
+strong,
+b,
+label,
+.checkbox label,
+.bold {
+    font-weight: $font-weight-bold;
+}
+
+.well {
+    :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.form-wrapper {
+    @extend .well;
+
+    .optional {
+        margin-left: 5px;
+        color: $gray-light;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.breadcrumb {
+    background: none;
+    margin: 0 0 $padding-large-vertical 0;
+    padding: 0;
+
+    > li + li:before {
+        padding: 0 0 0 5px;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        font-size: 12px;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $link-hover-color;
+        }
+    }
+
+    li:last-child a {
+        opacity: 0.5;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: 1;
+        }
+    }
+}
+
+
+//
+// LINKS
+// --------------------------------------------------
+
+// External links
+@media only screen {
+    a.external:not(.rm-external) {
+        &:after {
+            font-family: FontAwesome !important;
+            font-size: 0.78em;
+            content: "\f08e";
+            margin-left: 5px;
+            text-decoration: none !important;
+            display: inline-block;
+        }
+    }
+
+    .map-canvas a:after,
+    #map-canvas a:after {
+        content: "" !important;
+        margin-left: 0 !important;
+    }
+}
+
+//
+// ICONS
+// --------------------------------------------------
+
+* {
+
+    .fa,
+    .glyphicons,
+    .halflings {
+        margin-right: 5px;
+    }
+
+    .fa-right,
+    .glyphicons-right,
+    .halflings-right {
+        margin-right: 0;
+        margin-left: 5px;
+    }
+}
+
+h1,
+h2,
+h3,
+h1 a,
+h2 a,
+h3 a,
+.btn-lg {
+
+    .fa,
+    .glyphicons,
+    .halflings {
+        margin-right: $padding-base-horizontal;
+    }
+
+    .fa-right,
+    .glyphicons-right,
+    .halflings-right {
+        margin-right: 0;
+        margin-left: $padding-base-horizontal;
+    }
+}
+
+.fa-center,
+.glyphicons-center,
+.halflings-center {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.m {
+    &-0 {
+        margin: 0;
+    }
+
+    &-b {
+        &--0 {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.float {
+    &-left {
+        float: left; 
+    }
+
+    &-right {
+        float: right;
+    }
+}
+
+.p {
+    &-0 {
+        padding: 0;
+    }
+
+    &-t {
+        &--middle {
+            padding-top: 15px;
+        }
+
+        &--big {
+            padding-top: 52px;
+
+            @media only screen and (max-width: $screen-sm-min) {
+                padding-top: 30px;
+            }
+        }
+    }
+
+    &-b {
+        &--middle {
+            padding-bottom: 15px;
+        }
+
+        &--big {
+            padding-bottom: 52px;
+
+            @media only screen and (max-width: $screen-sm-min) {
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    &-v {
+        &--normal {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        &--middle {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        &--big {
+            padding-top: 52px;
+            padding-bottom: 52px;
+
+            @media only screen and (max-width: $screen-xs-min) {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+}
+
+.text {
+    &-weight {
+        &--lighter {
+            font-weight: 300;
+        }
+
+        &--normal {
+            font-weight: 400;
+        }
+
+        &--middle {
+            font-weight: 500;
+        }
+
+        &--bold {
+            font-weight: 600;
+        }
+
+        &--bolder {
+            font-weight: 700;
+        }
+    }
+}
+
+img {
+    &.img-center {
+        margin: 0 auto;
+
+        @media only screen and (max-width: $screen-sm-min) {
+            width: 100%;
+        }
+    }
+}

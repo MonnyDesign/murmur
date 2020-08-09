@@ -1,0 +1,184 @@
+<div class="main-menu">
+    <ul data-hover="dropdown" class="nav navbar-nav">
+        <li appHover class="dropdown mega">
+            <a routerLink="/business-cards" routerLinkActive="active" class="dropdown-toggle nav--link-first angle-down" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Business Cards <span class="fa fa-angle-down"></span></a>
+            <ul #megaMenu [style.height]="menuHeight" class="dropdown-menu mega-dropdown-menu row">
+                <div class="marketing-images col-md-6 float-right clearfix visible-big-block">
+                    <div class="col-md-6">
+                        <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                        <div class="marketing-images--content">
+                            <h5>Business Cards with special finishes</h5>
+                            <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                            <a href='#' class="angle-right">Order Special Finishes <span class="fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                        <div class="marketing-images--content">
+                            <h5>Luxe Business Cards</h5>
+                            <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                            <a href='#' class="angle-right">Order Luxe Business Cards <span class="fa fa-angle-right"></span></a>
+                        </div>
+                    </div>
+                </div> 
+                <li appVisibleSubmenu (navListHovered)="onMegaMenuHeight($event, list1)" class="nav--item nav--item--open col-1/4">
+                    <a routerLink="/business-cards" routerLinkActive="active" class="nav--link nav--link--open angle-right">Business Cards <div class="angle visible-big-block visible-big-block"><span class="fa fa-angle-right"></span></div></a>
+                    <ul #list1 class="nav--list col-1/4" [style.height]="ulHeight">
+                        <li class="nav--item-last"><a routerLink="/business-cards/original-business-cards" routerLinkActive="active" class="nav--link">Original Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Special Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Cotton Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Luxe Business Cards</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Design a Business Cards</a></li>
+                    </ul>
+                </li>
+
+                <li appVisibleSubmenu (navListHovered)="onMegaMenuHeight($event, list2)" class="nav--item nav--item-last-open col-1/4">
+                    <a class="nav--link nav--link--open angle-right" href="#">Square Business Cards <div class="angle visible-big-block visible-big-block"><span class="fa fa-angle-right"></span></div></a>
+                    <ul #list2 class="nav--list col-1/4" [style.height]="ulHeight">
+                        <li class="nav--item-last"><a class="nav--link" href="#">Original Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Special Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Cotton Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Super Square Business Cards</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Luxe Square Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Gold Foil Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Silver Foil Business Cards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Spot Gloss Business Cards</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Design a Business Cards</a></li>
+                    </ul>
+                </li>
+                <li appVisibleSubmenu (navListHovered)="onMegaMenuHeight($event, list3)" class="nav--item nav--item-last-open col-1/4">
+                    <a class="nav--link nav--link--open angle-right" href="#">Mini Business Cards <div class="angle visible-big-block visible-big-block"><span class="fa fa-angle-right"></span></div></a>
+                    <ul #list3 class="nav--list col-1/4 " [style.height]="ulHeight">
+                        <li class="nav--item-last"><a class="nav--link" href="#">Original MiniCards</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Luxe MiniCards</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Design a Business Cards</a></li>
+                    </ul>
+                </li>
+                <li class="nav--item col-1/4" role="separator" class="divider"></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">Sample Pack</a></li>
+                <li role="separator" class="divider col-1/4"></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">All Business Cards</a></li>
+            </ul>
+        </li> 
+        <li appHover class="dropdown mega">
+            <a href="#" class="dropdown-toggle nav--link-first angle-down" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Marketing Materials <span class="fa fa-angle-down"></span></a>
+            <ul #megaMenu2 [style.height]="menu2Height" class="dropdown-menu mega-dropdown-menu row">
+                <div class="marketing-images col-md-6 float-right clearfix visible-big-block">
+                        <div class="col-md-6">
+                            <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                            <div class="marketing-images--content">
+                                <h5>Business Cards with special finishes</h5>
+                                <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                <a href='#' class="angle-right">Order Special Finishes <span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                            <div class="marketing-images--content">
+                                <h5>Luxe Business Cards</h5>
+                                <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                <a href='#' class="angle-right">Order Luxe Business Cards <span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                <li appVisibleSubmenu (navListHovered)="onMegaMenuHeight($event, list4)" class="nav--item nav--item--open col-1/4">
+                    <a class="nav--link nav--link--open angle-right" href="#">Postcards <div class="angle visible-big-block visible-big-block"><span class="fa fa-angle-right"></span></div></a>
+                    <ul #list4 class="nav--list col-1/4 " [style.height]="ulHeight">
+                        <li class="nav--item-last"><a class="nav--link" href="#">Action</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Another action</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Something else here</a></li>
+
+                    </ul>
+                </li>
+
+
+                <li appVisibleSubmenu (navListHovered)="onMegaMenuHeight($event, list5)" class="nav--item nav--item-last-open col-1/4">
+                    <a class="nav--link nav--link--open angle-right" href="#">Flyers <div class="angle visible-big-block visible-big-block"><span class="fa fa-angle-right"></span></div></a>
+                    <ul #list5 class="nav--list col-1/4 " [style.height]="ulHeight">
+                        <li class="nav--item-last"><a class="nav--link" href="#">Action 1</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Another action 2</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Something else here 3</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Separated link 4</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">One more separated link 5</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">One more separated link 5</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Action 1</a></li>
+                        <li class="nav--item-last"><a class="nav--link" href="#">Another action 2</a></li>
+                    </ul>
+                </li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">Stickers</a></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">Menus</a></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">Posters</a></li>
+                <li class="nav--item col-1/4" role="separator" class="divider"></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">All Marketing Materials</a></li>
+                <li class="nav--item col-1/4"><a class="nav--link" href="#">All products</a></li>
+            </ul>
+        </li>
+        <li appHover class="dropdown mega">
+            <a href="#" class="dropdown-toggle nav--link-first angle-down" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Accessories <span class="fa fa-angle-down"></span></a>
+            <ul class="dropdown-menu mega-dropdown-menu row">
+                <div class="marketing-images col-md-6 float-right clearfix visible-big-block">
+                        <div class="col-md-6">
+                            <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                            <div class="marketing-images--content">
+                                <h5>Business Cards with special finishes</h5>
+                                <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                <a href='#' class="angle-right">Order Special Finishes <span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                            <div class="marketing-images--content">
+                                <h5>Luxe Business Cards</h5>
+                                <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                <a href='#' class="angle-right">Order Luxe Business Cards <span class="fa fa-angle-right"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Action </a></li>
+                <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Another action</a></li>
+                <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">One more separated link</a></li>
+            </ul>
+        </li>
+        <li><a class="nav--link-first angle-down" href="#">10+ Employees? <span class="sr-only">(current)</span></a></li>
+        <li appHover class="dropdown mega">
+                <a href="#" class="dropdown-toggle nav--link-first angle-down" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help & FAQs <span class="fa fa-angle-down"></span></a>
+                <ul class="dropdown-menu mega-dropdown-menu row">
+                    <div class="marketing-images col-md-6 float-right clearfix visible-big-block">
+                            <div class="col-md-6">
+                                <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                                <div class="marketing-images--content">
+                                    <h5>Business Cards with special finishes</h5>
+                                    <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                    <a href='#' class="angle-right">Order Special Finishes <span class="fa fa-angle-right"></span></a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="#"><img src='http://placehold.it/270x135' class="img-responsive"></a>
+                                <div class="marketing-images--content">
+                                    <h5>Luxe Business Cards</h5>
+                                    <p>Extra-thick and extra fancy – these amazing Business Cards make a bold statement.</p>
+                                    <a href='#' class="angle-right">Order Luxe Business Cards <span class="fa fa-angle-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Action </a></li>
+                    <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Another action</a></li>
+                    <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">Separated link</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="nav--item nav--item--open col-1/4"><a class="nav--link" href="#">One more separated link</a></li>
+                </ul>
+            </li>
+    </ul>
+</div>

@@ -1,0 +1,7 @@
+Family: Repo
+Designer: Stefan Peev
+Foundry: Context Ltd.
+Category: San-serif
+Description: 
+The Repo font family is a free-to-use non-commercial font family derivated by Stefan Peev (https://www.contextbg.net) and released under the SIL Open Font License (OFL) (http://scripts.sil.org/OFL).
+The Repo font family is inspired by Ubuntu fonts but the shape of the glyphs, the design and the metrics are not the same as in Ubuntu. So, the Repo needs to have its own name and to be used as a stand-alone font. The project is ongoing, and we expect that Repo will be extended to cover many written languages in its final release.

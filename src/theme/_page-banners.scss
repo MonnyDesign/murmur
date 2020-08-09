@@ -1,0 +1,113 @@
+// Page banner HOME PAGE ---> Background image
+
+#page-banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    /* background: #AFCDD7; */
+}
+
+@media only screen and (min-width: 1500px) {
+    #page-banner {
+        background-image: url(http://placehold.it/2500x600);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #page-banner {
+        background-image: url(http://placehold.it/1500x600);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #page-banner {
+        background-image: url(http://placehold.it/400x400);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #page-banner {
+        background-image: url(http://placehold.it/768x400);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #page-banner {
+        background-image: url(http://placehold.it/992x500);
+        /* background: #AFCDD7; */
+    }
+}
+
+
+#page-banner.page-banner-lg {
+    height: 500px;
+}
+
+@media only screen and (min-width: 1200px) {
+    #page-banner.page-banner-lg {
+        height: 600px;
+    }
+}
+
+
+// PAGE BANNER BUSINESS CARDS PAGE
+
+#page-banner-bc {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150px;
+    /* background: #AFCDD7; */
+}
+
+@media only screen and (min-width: 1500px) {
+    #page-banner-bc {
+        background-image: url(http://placehold.it/2500x600);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #page-banner-bc {
+        background-image: url(http://placehold.it/1500x600);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #page-banner-bc {
+        background-image: url(http://placehold.it/400x400);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #page-banner-bc {
+        background-image: url(http://placehold.it/768x400);
+        /* background: #AFCDD7; */
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #page-banner-bc {
+        background-image: url(http://placehold.it/992x500);
+        /* background: #AFCDD7; */
+    }
+}
+
+
+#page-banner-bc.page-banner-lg {
+    height: 500px;
+}
+
+@media only screen and (min-width: 1200px) {
+    #page-banner-bc.page-banner-lg {
+        height: 600px;
+    }
+}

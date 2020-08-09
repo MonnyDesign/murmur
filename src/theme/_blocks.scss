@@ -1,0 +1,187 @@
+$quote-color: $gray-lighter;
+$quote-size: 60px;
+$block-margin: $grid-gutter-width;
+
+@font-face {
+	font-family: "Repo";
+	font-style: normal;
+	src: url("../src/assets/fonts/Repo.otf") format("otf");
+}
+
+.rich-text {
+    > :first-child {
+        margin-top: 0 !important;
+    }
+
+    > :last-child {
+        margin-bottom: 0 !important;
+    }
+
+    ul, ol {
+        overflow: hidden; // https://stackoverflow.com/questions/710158/why-do-my-list-item-bullets-overlap-floating-elements
+    }
+}
+
+hr {
+    margin: $block-margin 0;
+    border: 0;
+    border-top: $border-thickness solid $border-color;
+}
+
+.block {
+    &:not(.align-left):not(.align-right) {
+
+        margin-bottom: $block-margin/2;
+        @media only screen and (min-width: $grid-float-breakpoint) {
+            margin-bottom: $block-margin;
+        }
+    }
+    
+    @media only screen and (min-width: $screen-sm-min) {
+        &.align-left {
+            float: left;
+            margin-right: $grid-gutter-width;
+            width: 45%;
+        }
+        &.align-right {
+            float: right;
+            width: 45%;
+            margin-left: $grid-gutter-width;
+        }
+    }
+    @media only screen and (max-width: $screen-sm) {
+        &.align-left,
+        &.align-right {
+            margin-bottom: $block-margin;
+        }
+    }
+
+    &.block-text {
+
+    }
+
+    &.block-quote {
+        blockquote {
+            position: relative;
+            margin: 0;
+            padding: $grid-gutter-width*1.5 $grid-gutter-width;
+
+            &:before,
+            &:after {
+                font-family: 'Catamaran';
+                content: '"';
+                position: absolute;
+                color: $quote-color;
+                font-size: 5em;
+                height: $quote-size;
+                width: $quote-size;
+                z-index: 0;
+            }
+            
+            &:before{
+                transform: rotate(-180deg);
+                top: 0;
+                left: 0;
+            }
+            
+            &:after{
+                bottom: 0;
+                right: 0;
+            }
+            
+            cite {
+                color: $gray-light;
+            }
+        }
+    }
+
+    &.block-image {
+    }
+
+    &.block-gallery {
+        .slick-slide {
+            margin: 3px;
+        }
+    }
+
+    &.block-image,
+    &.block-gallery {
+        .thumbnail {
+            overflow: hidden;
+            display: block;
+            padding: 0;
+            position: relative;
+            background-color: $gray-lighter;
+            margin-bottom: 0;
+
+            img {
+                display: block;
+                position: relative;
+                z-index: 1;
+                margin: 0 auto
+            }
+
+            span.zoom {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                padding: 3px 5px;
+                background-color: transparentize($link-color, 0.2);
+                font-size: 0.8em;
+                color: #fff;
+            }
+
+            &:hover, &:focus {
+                span.zoom {
+                    background-color: $link-hover-color;
+                }
+            }
+        }
+    }
+
+    &.block-video {
+        clear: both;
+        
+        .embed-wrapper {
+            position: relative;
+        }
+    }
+
+    &.block-document-list {
+        .download-list {
+            border-left: 2px solid $brand-primary;
+            padding-left: 20px;
+            position: relative;
+            margin: 0;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    padding: $padding-base-vertical 0;
+                    display: inline-block;
+                }
+            }
+
+            .fa { 
+                color: $link-color;
+                font-size: 1.15em;
+            }
+
+            .meta { 
+                font-size: 0.82em;
+                font-weight: $font-weight;
+                color: $gray-light;
+            }
+        }
+    }
+
+    figcaption {
+        color: $gray-light;
+        font-size: 0.9em;
+        font-weight: $font-weight;
+        margin-top: 1em;
+    }
+}

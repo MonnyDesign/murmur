@@ -1,0 +1,66 @@
+<section class="media-wrap">
+
+    <div id="page-banner-bc" class="banner image-with-text page-banner-lg" [style.background]="onBackgroundChange()"></div>
+    <div class="media-content form-block">
+        <div class="container">
+            <div class="row reorder-xxs">
+                <div class="col-lg-5 col-xs-6 col-xxs-12">
+                    <div class="form-options">
+                        <header>
+                            <h3 class="title">Original Business Cards</h3>
+                            <p class="text">350gsm, high-quality paper</p>
+                        </header>
+                        <div class="form-options-choice"> 
+                            <div class="choose-option size-option">
+                                <label class="col-1/5">Size</label>  
+                                <select [(ngModel)]="selectedSize" (ngModelChange)="onChangePrice(selectedSize, selectedCorner)" class="col-1/2" id="card-size">
+                                    <option value="" disabled data-size-type="none">Choose a size</option>
+                                    <option *ngFor="let option of sizeOptions" [value]="option.name"> {{ option.name + ' - ' + option.desc }}</option>
+                                    <!--<option data-size-type="standart" value=""> Стандатен - 84мм x 55мм</option>
+                                    <option data-size-type="square" id="square" value="">Квадратен - 65мм x 65мм</option>-->
+                                </select>
+                            </div> 
+
+                            <div class="choose-option corners-option">
+                                <label class="col-1/5">Corners</label>
+                                <select [(ngModel)]="selectedCorner" (ngModelChange)="onChangePrice(selectedSize, selectedCorner)" [disabled]="selectedSize==''" name='select' class="col-1/2" id="card-corners">
+                                    <option *ngFor="let option of cornerOptions" [value]="option.name">{{ option.name }}</option>
+                                    <!--<option data-corner-type="square" value="">Заострени</option>
+                                    <option data-corner-type="rounded" value="">Заоблени</option>-->
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="choice-summary">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="details">
+                                        <p class="quantity"><span>50 </span> визитки от</p>
+                                        <div class="prices">
+                                            <div id="priceWithVat">
+                                                <p>Избери размер</p>
+                                            </div>
+                                            <p id="price"> _____ лв. без ДДС</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="button-submit">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Продължи</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-xs-6 col-xxs-12">
+                    <div class="card-block">
+                        <div class="card-images-nest">
+                            <img class="card-img img-responsive img-center" [src]="onNestedImg()" alt="....." title=".....">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

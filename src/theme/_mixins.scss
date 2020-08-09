@@ -1,0 +1,73 @@
+@import "../bootstrap-3.3.7/stylesheets/bootstrap/mixins.scss";
+@import "../bootstrap-3.3.7/stylesheets/bootstrap/_type.scss";
+
+
+// Fix for retina image mixin not working inside media queries
+// (https://bitbucket.org/snippets/rkhleics/jgBo5/fix-for-bootstrap-img-retina-mixin-not)
+
+@mixin radius($top-left-radius, $top-right-radius, $bottom-right-radius, $bottom-left-radius) {
+    -webkit-border-top-left-radius: $top-left-radius;
+    -webkit-border-top-right-radius: $top-right-radius;
+    -webkit-border-bottom-right-radius: $bottom-right-radius;
+    -webkit-border-bottom-left-radius: $bottom-left-radius;
+    -moz-border-radius-topleft: $top-left-radius;
+    -moz-border-radius-topright: $top-right-radius;
+    -moz-border-radius-bottomright: $bottom-right-radius;
+    -moz-border-radius-bottomleft: $bottom-left-radius;
+    border-top-left-radius: $top-left-radius;
+    border-top-right-radius: $top-right-radius;
+    border-bottom-right-radius: $bottom-right-radius;
+    border-bottom-left-radius: $bottom-left-radius;
+}
+
+@mixin transitions($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin rotate($degrees) {
+    -webkit-transform: rotate($degrees);
+    -moz-transform: rotate($degrees);
+    -ms-transform: rotate($degrees);
+    -o-transform: rotate($degrees);
+    transform: rotate($degrees);
+}
+
+@mixin img-retina($file-1x, $file-2x, $width-1x, $height-1x, $min-width: 0) {
+    @media only screen and (min-width: $min-width) {
+        background-image: url("#{$file-1x}");
+    }
+
+    @media
+    only screen and (min-width: $min-width) and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min-width: $min-width) and (   min--moz-device-pixel-ratio: 2),
+    only screen and (min-width: $min-width) and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (min-width: $min-width) and (        min-device-pixel-ratio: 2),
+    only screen and (min-width: $min-width) and (                min-resolution: 192dpi),
+    only screen and (min-width: $min-width) and (                min-resolution: 2dppx) {
+        background-image: url("#{$file-2x}");
+        background-size: $width-1x $height-1x;
+    }
+}
+
+@mixin vcenter() {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}

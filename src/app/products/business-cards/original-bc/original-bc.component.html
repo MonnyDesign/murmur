@@ -1,0 +1,119 @@
+<app-original-bc-media-banner></app-original-bc-media-banner>
+<div class="product-section-content">
+    <app-sticky-nav></app-sticky-nav> 
+
+    <section class="p-t--big"> 
+        <div class="container">
+            <h4>{{ type }} </h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+    </section>
+
+    <section id="product-details" class="sticky-nav-content p-t--big">
+    
+    <app-product-menu></app-product-menu>
+
+        <div class="container">
+            <div class="pricing-and-design">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade active" id="pricing-nav-tab" role="tabpanel" aria-labelledby="home-tab">
+
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-options pricing-list">
+                                    <h4 class="text-weight--normal">Prices</h4>
+                                    <p class="form-options--desc">Choose a paper and see how much it will cost you.</p>
+                                    <div class="form-options-choice">
+                                        <div class="choose-option size-option">
+                                            <label class="col-1/5">Size</label>
+                                            <select [(ngModel)]="selectedCardSizeTbl" (ngModelChange)="onChangeTable(selectedCardSizeTbl, selectedCardCornersTbl)" class="col-2/3">
+                                                <option *ngFor="let option of sizeOptions" [value]="option.name">{{ option.name }}</option>
+                                                <!-- <option value="standart" data-size-type="standart"> Standart - 84mm x 55mm</option>
+                                                <option value="square" data-size-type="square">Square - 65mm x 65mm</option> -->
+                                            </select>
+                                        </div>
+
+                                        <div class="choose-option corners-option">
+                                            <label class="col-1/5">Corners</label>
+                                            <select [(ngModel)]="selectedCardCornersTbl" (ngModelChange)="onChangeTable(selectedCardSizeTbl, selectedCardCornersTbl)" name='select' class="col-2/3">
+                                                <option *ngFor="let option of cornerOptions" [value]="option.name">{{ option.name }}</option>
+                                                <!-- <option value="square" data-corner-type="square">Square</option>
+                                                <option value="rounded" data-corner-type="rounded">Rounded</option> -->
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <p>{{ selectedCardSizeTbl + ' ' + selectedCardCornersTbl}}</p>
+                                    <p>{{ message }}</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div id="pricing-table">
+                                    <div class="box-text" id="prices">
+                                        <div class="titleTbl"></div>
+                                        <table class="table" id="productsData">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <p class="table-col-name">Quantity</p>
+                                                    </th>
+                                                    <th class="hidden-xs">
+                                                        <p class="table-col-name">Price per card</p>
+                                                    </th>
+                                                    <th>
+                                                        <p class="table-col-name">Pack price</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="printTbl">
+                                                <tr *ngFor="let productData of productBasic">
+                                                    <td><p><strong>{{ productData.quantity }}</strong></p></td>
+                                                    <td class="hidden-xs"><p>{{ productData.currency + '' + productData.pricePerCard }}</p></td>
+                                                    <td>
+                                                        <p>
+                                                            <span class='priceWithVat'>{{ productData.currency + '' + productData.priceVat }}</span> 
+                                                            <span class='priceNoVat'>({{ productData.priceNoVat }} ex. VAT)</span> 
+                                                        </p>
+                                                    </td>
+                                                </tr>    
+                                                                                          
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="advantage">
+                                    <img class="img-responsive" src="../../../../assets/imgs/piggy-bank.svg" />
+                                    <h4 class="text-center text-weight--normal">Buy more, save more</h4>
+                                    <p class="text-center text-weight--lighter">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade" id="about-standart-nav-tab" role="tabpanel" aria-labelledby="profile-tab">about-standart</div>
+                    <div class="tab-pane fade" id="standart-nav-tab" role="tabpanel" aria-labelledby="contact-tab">standart</div>
+                    <div class="tab-pane fade" id="square-nav-tab" role="tabpanel" aria-labelledby="square-tab">square</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="size" class="p-b--big p-t--big">
+        <div class="sticky-nav-content">
+            <div class="container">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
