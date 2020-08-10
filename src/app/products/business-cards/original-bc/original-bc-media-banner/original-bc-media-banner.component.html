@@ -33,20 +33,20 @@
                         <div class="choice-summary">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="details">
-                                        <p class="quantity"><span>50 </span> визитки от</p>
+                                    <div class="details" >
+                                        <p class="quantity"><span>{{ prodBasicQnt }} </span> business cards from</p>
                                         <div class="prices">
                                             <div id="priceWithVat">
-                                                <p>Избери размер</p>
+                                                <p>{{currency}}{{ priceVat }}</p>
                                             </div>
-                                            <p id="price"> _____ лв. без ДДС</p>
+                                            <p id="price">({{currency}}{{ priceNoVat }} ex. VAT)</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="button-submit">
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Продължи</button>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Next</button>
                                     </div>
                                 </div>
                             </div>

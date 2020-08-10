@@ -25,6 +25,7 @@ import { StickyNavComponent } from './products/navs/sticky-nav/sticky-nav.compon
 import { ProductMenuComponent } from './products/navs/product-menu/product-menu.component';
 
 import { ProductsService } from './services/products.service'; 
+import { PricesCalculationService } from './services/prices-calculation.service';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -59,7 +60,10 @@ const appRoutes: Routes = [
     FormsModule, 
     RouterModule.forRoot(appRoutes)
       ],
-  providers: [ProductsService],
+  providers: [
+    ProductsService,
+    PricesCalculationService
+  ],
   bootstrap: [AppComponent] 
 })
 export class AppModule { }
